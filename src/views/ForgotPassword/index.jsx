@@ -1,9 +1,11 @@
 import { Button, Form, Input, Typography } from 'antd';
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './forgotPassword.scss';
 
 const ForgotPassword = memo(() => {
+    const navigate = useNavigate();
+
     return (
         <div className="forgot">
             <Typography.Title>Forgot Password</Typography.Title>
@@ -36,7 +38,11 @@ const ForgotPassword = memo(() => {
                     <Input placeholder="Email" />
                 </Form.Item>
                 <Form.Item>
-                    <Button type="primary" htmlType="submit">
+                    <Button
+                        type="primary"
+                        htmlType="submit"
+                        onClick={() => navigate('/reset-password')}
+                    >
                         Reset password
                     </Button>
                 </Form.Item>

@@ -4,6 +4,7 @@ import RegisterLayout from '../layouts/RegisterLayout';
 import Login from '../views/Login';
 import Register from '../views/Register';
 import ForgotPassword from '../views/ForgotPassword';
+import ResetPassword from '../views/ResetPassword';
 
 export default function RouteComponent() {
     const routeElements = useRoutes([
@@ -29,6 +30,14 @@ export default function RouteComponent() {
                 <RegisterLayout>
                     <ForgotPassword />
                 </RegisterLayout>
+            ),
+        },
+        {
+            path: '/reset-password',
+            element: (
+                <>
+                    <ResetPassword />,
+                </>
             ),
         },
     ]);
