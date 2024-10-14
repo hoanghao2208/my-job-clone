@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom';
 import RegisterLayout from '../layouts/RegisterLayout';
 import Login from '../views/Login';
 import Register from '../views/Register';
+import ForgotPassword from '../views/ForgotPassword';
 
 export default function RouteComponent() {
     const routeElements = useRoutes([
@@ -15,10 +16,18 @@ export default function RouteComponent() {
             ),
         },
         {
-            path: 'register',
+            path: '/register',
             element: (
                 <RegisterLayout>
                     <Register />
+                </RegisterLayout>
+            ),
+        },
+        {
+            path: '/forgot-password',
+            element: (
+                <RegisterLayout>
+                    <ForgotPassword />
                 </RegisterLayout>
             ),
         },
