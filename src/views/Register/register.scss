@@ -1,27 +1,24 @@
 @import '../../scss/global.scss';
 
-.login {
-    margin-top: 80px;
-    &--to-register {
+.register {
+    margin-top: 60px;
+    width: 90%;
+    &--to-login {
         display: inline-block;
         margin-bottom: 20px;
         font-family: $font-inter;
     }
-    &--footer {
-        display: flex;
-        justify-content: flex-end;
-        width: 80%;
-        margin-bottom: 20px;
-    }
-    .ant-col {
-        width: 80% !important;
+    &__form--name {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     .ant-input,
     .ant-input-password {
         padding: 6px 11px;
         font-size: 14px;
-        color: $color-date;
         font-weight: 500;
+        color: $color-date;
     }
     .ant-form-item {
         margin-bottom: 16px;
