@@ -1,0 +1,60 @@
+@import '../../scss/global.scss';
+
+.job-details {
+    background-color: #f1f2f4;
+    &-label {
+        padding: 24px 0;
+        width: 1280px;
+        margin: 0 auto;
+    }
+    &-content {
+        width: 1280px;
+        padding: 24px 0;
+        margin: 0 auto;
+        .job-title {
+            h4 {
+                font-size: 24px;
+                font-weight: 500;
+            }
+            span {
+                display: inline-block;
+                padding: 6px 12px;
+                border-radius: 24px;
+                font-size: 14px;
+            }
+            .featured {
+                background-color: #ffeded;
+                color: #ff4f4f;
+            }
+            .fullTime {
+                background-color: #e8f1ff;
+                color: #0066ff;
+            }
+        }
+        .apply-btn {
+            .btn-save {
+                display: inline-block;
+                padding: 4px;
+                cursor: pointer;
+                border-radius: 8px;
+                background-color: #e8f1ff;
+            }
+            .ant-btn {
+                width: 200px;
+                background-color: #0a65cc;
+                height: 36px;
+            }
+            .expired-date {
+                span {
+                    font-size: 14px;
+                    &:first-child {
+                        color: #767f8c;
+                    }
+                    &:last-child {
+                        color: #e05151;
+                    }
+                }
+            }
+        }
+    }
+}
