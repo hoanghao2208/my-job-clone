@@ -100,6 +100,44 @@
                     gap: 40px;
                 }
             }
+            .social-overview {
+                padding: 32px;
+                border: 2px solid #e7f0fa;
+                border-radius: 8px;
+                .social-name {
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                    p {
+                        font-size: 14px;
+                        color: #767f8c;
+                    }
+                }
+                &-infor-item {
+                    font-size: 16px;
+                    span {
+                        &:first-child {
+                            color: #5e6670;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-related {
+        width: 1280px;
+        margin: 0 auto;
+        padding: 40px 0;
+        h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 500;
+        }
+        .job-related {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
     }
 }

@@ -1,17 +1,19 @@
 import { Button, Flex } from 'antd';
 import React, { memo } from 'react';
-import './jobDetails.scss';
-import { IconInstagram } from '../../assets/icons/IconInstagram';
-import { IconLink } from '../../assets/icons/IconLink';
-import { IconMail } from '../../assets/icons/IconMail';
-import { IconPhoneSmall } from '../../assets/icons/IconPhoneSmall';
-import { IconSave } from '../../assets/icons/IconSave';
-import JobOverviewItem from './JobOverviewItem';
 import { IconCalendar } from '../../assets/icons/IconCalendar';
 import { IconClock } from '../../assets/icons/IconClock';
 import { IconEducation } from '../../assets/icons/IconEducation';
-import { IconSalary } from '../../assets/icons/IconSalary';
+import { IconInstagram } from '../../assets/icons/IconInstagram';
+import { IconInstagramBorder } from '../../assets/icons/IconInstagramBorder';
+import { IconLink } from '../../assets/icons/IconLink';
 import { IconLocationBig } from '../../assets/icons/IconLocationBig';
+import { IconMail } from '../../assets/icons/IconMail';
+import { IconPhoneSmall } from '../../assets/icons/IconPhoneSmall';
+import { IconSalary } from '../../assets/icons/IconSalary';
+import { IconSave } from '../../assets/icons/IconSave';
+import './jobDetails.scss';
+import JobOverviewItem from './JobOverviewItem';
+import JobItem from '../../components/JobItem/JobItem';
 
 const JobDetails = memo(() => {
     return (
@@ -141,7 +143,7 @@ const JobDetails = memo(() => {
                     </div>
                 </div>
                 <div className="job-information">
-                    <Flex vertical>
+                    <Flex vertical gap={20}>
                         <div className="job-overview">
                             <h3>Job Overview</h3>
                             <div className="job-overview-list">
@@ -182,9 +184,80 @@ const JobDetails = memo(() => {
                                 />
                             </div>
                         </div>
+                        <Flex vertical gap={20} className="social-overview">
+                            <Flex gap={12} align="center">
+                                <IconInstagramBorder />
+                                <Flex vertical gap={12} className="social-name">
+                                    <h3>Instagram</h3>
+                                    <p>Social networking service</p>
+                                </Flex>
+                            </Flex>
+                            <Flex
+                                vertical
+                                gap={20}
+                                className="social-overview-infor"
+                            >
+                                <Flex
+                                    align="center"
+                                    justify="space-between"
+                                    className="social-overview-infor-item"
+                                >
+                                    <span>Founded in:</span>
+                                    <span>March 21, 2006</span>
+                                </Flex>
+                                <Flex
+                                    align="center"
+                                    justify="space-between"
+                                    className="social-overview-infor-item"
+                                >
+                                    <span>Organization type:</span>
+                                    <span>Private Company</span>
+                                </Flex>
+                                <Flex
+                                    align="center"
+                                    justify="space-between"
+                                    className="social-overview-infor-item"
+                                >
+                                    <span>Company size:</span>
+                                    <span>120-300 Employers</span>
+                                </Flex>
+                                <Flex
+                                    align="center"
+                                    justify="space-between"
+                                    className="social-overview-infor-item"
+                                >
+                                    <span>Phone:</span>
+                                    <span>(406) 555-0120</span>
+                                </Flex>
+                                <Flex
+                                    align="center"
+                                    justify="space-between"
+                                    className="social-overview-infor-item"
+                                >
+                                    <span>Email:</span>
+                                    <span>twitter@gmail.com</span>
+                                </Flex>
+                                <Flex
+                                    align="center"
+                                    justify="space-between"
+                                    className="social-overview-infor-item"
+                                >
+                                    <span>Website:</span>
+                                    <span>https://twitter.com</span>
+                                </Flex>
+                            </Flex>
+                        </Flex>
                     </Flex>
                 </div>
             </Flex>
+            <div className="job-details-related">
+                <h2>Related Jobs</h2>
+                <div className="job-related">
+                    <JobItem />
+                    <JobItem />
+                    <JobItem />
+                </div>
+            </div>
         </>
     );
 });
